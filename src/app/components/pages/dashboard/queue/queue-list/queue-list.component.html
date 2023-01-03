@@ -1,0 +1,36 @@
+<div class="container">
+    <mat-toolbar>
+        <span>Business</span>
+        <div class="example-spacer"></div>
+        <button mat-raised-button color="primary" (click)="openDialogCreate()">Add Queue</button>
+      </mat-toolbar>
+      
+    
+
+      <table class="table table-hover table-responsive-md">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Queue</th>
+            <th scope="col">Actions</th>
+          </tr>
+          
+            
+        
+        </thead>
+        <tbody >
+          <tr *ngFor="let queuee of queue" >
+            
+            <td>{{queuee.id}}</td>
+            <td>{{queuee.name}}</td>
+            <td>
+              <i class="fa-solid fa-pen-to-square p-2" (click)="openDialogUpdate(queuee)"   style="color:green">  </i>
+              <i class="fa-solid fa-trash" (click)="deleteQueue(queuee.id)" style="color:red"></i>
+              
+          </td>
+          
+          </tr>
+          
+        </tbody>
+      </table>
+</div>

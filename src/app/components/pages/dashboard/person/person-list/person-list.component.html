@@ -1,0 +1,51 @@
+<div class="container">
+    <mat-toolbar>
+        <span>Person</span>
+        <div class="example-spacer"></div>
+        <button mat-raised-button color="primary" (click)="openDialog()">Add Person</button>
+      </mat-toolbar>
+
+      <table class="table table-hover table-responsive-md">
+        <thead class="thead-dark">
+          <tr>
+            
+            <th scope="col">Namee</th>
+            <th scope="col">LastName</th>
+            <th scope="col">IdentificationNumber</th>
+            <th scope="col">Birthdate</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Pregnant</th>
+            <th scope="col">HealthIssues</th>
+            <th scope="col">Height</th>
+            <th scope="col">Weight</th>
+            <th scope="col">Actions</th>
+
+
+          </tr>
+          
+            
+        
+        </thead>
+        <tbody >
+          <tr *ngFor="let peerson of person" >
+            
+            <td>{{peerson.name}}</td>
+            <td>{{peerson.lastName}}</td>
+            <td>{{peerson.identificationNumber}}</td>
+            <td>{{peerson.birthdate }}</td>
+            <td>{{peerson.gender}}</td>
+            <td>{{peerson.pregnant}}</td>
+            <td>{{peerson.healthIssues}}</td>
+            <td>{{peerson.height}}</td>
+            <td>{{peerson.weight}}</td>
+            <td>
+              <i class="fa-solid fa-pen-to-square p-2" (click)="editPerson(peerson)"  style="color:green">  </i>
+              <i class="fa-solid fa-trash" (click)="deletePerson(peerson.id)" style="color:red"></i>
+              
+          </td>
+          
+          </tr>
+          
+        </tbody>
+      </table>
+</div>

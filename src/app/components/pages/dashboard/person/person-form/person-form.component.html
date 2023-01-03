@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="box-login shadow-lg border p-5 rounded">
+      <div class="row">
+        <form [formGroup]="form" >
+          <div class="form-group">
+            <label>Person File</label>
+            <input
+              type="file"
+              class="form-control mb-3"
+              name="DocumentFile"
+              (change)="addfilehandler($event)"
+              placeholder="Enter the person file"
+              
+            />
+          </div>
+
+          <div class="form-group">
+            <label>Are you Pregnant?</label>
+            <input
+              type="checkbox"
+              class="form-check-input" 
+              formControlName="pregnant"
+            />
+          </div>
+          <div class="form-group">
+            <label>Have u HealthIssues?</label>
+            <input
+              type="checkbox"
+              class="form-check-input" 
+              formControlName="healthIssues"
+            />
+          </div>
+          <div class="form-group">
+            <label>Height</label>
+            <input
+              type="number"
+              class="form-control mb-3"
+              formControlName="height"
+            />
+          </div>
+          <div class="form-group">
+            <label>Weight</label>
+            <input
+              type="number"
+              class="form-control mb-3"
+              formControlName="weight"
+            />
+          </div>
+
+          <button (click)="createPerson()" class="btn text-center">Aceptar</button>
+        </form>
+      </div>
+    </div>
+  </div>

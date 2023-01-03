@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="box-login shadow-lg border p-5 rounded">
+      <div class="row">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label>Queue Id</label>
+                <select class="large-select" formControlName="queueId">
+                    <option  *ngFor="let personqueuee of personqueue" [ngValue]="personqueuee.queue">
+                      {{ personqueuee.queue.name }}
+                    </option>
+                  </select>
+              </div>
+              <div class="form-group">
+                <label>PersonId</label>
+                <select class="large-select" formControlName="personId">
+                    <option  *ngFor="let personqueuee of personqueue" [ngValue]="personqueuee.person">
+                      {{ personqueuee.person.name }}
+                    </option>
+                  </select>
+              </div>
+
+          <button type="submit" class="btn text-center">Aceptar</button>
+        </form>
+      </div>
+    </div>
+  </div>
